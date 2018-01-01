@@ -1,0 +1,17 @@
+IHelloService.aidl is equivalent to IHelloService.h in cpp binder
+we then use android to compile it into IHelloService.java, this is equivalent to BnHelloService.cpp which inherits from .interface but we need to override the sayhello and sayhello_to from stub and also we can use 
+the proxy as it defines the BpHelloService.cpp
+
+(1) AIDL
+1. 把 IHelloService.aidl 放入 frameworks/base/core/java/android/os
+2. 修改 frameworks/base/Android.mk  添加一行
+         core/java/android/os/IVibratorService.aidl \
++        core/java/android/os/IHelloService.aidl \
+
+3. mmm frameworks/base
+
+4. 它会生成: ./out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/src/core/java/android/os/IHelloService.java
+
+
+HelloService.java is equivalent to BnHelloService.cpp, it should inherit from .stub and BpHelloService.cpp
+

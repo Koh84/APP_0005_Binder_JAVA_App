@@ -14,7 +14,7 @@ public class TestServer{
 		//ServiceManager.addService(Context.USER_SERVICE, UserManagerService.getInstance());
 		while(true)
 		{
-			try{
+			Try{
 				Thread.sleep(100);
 				// we don't have to do anything because we use app_process to run
 				// this app will use binder 1 and 2 to help read and parse the data

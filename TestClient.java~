@@ -7,7 +7,7 @@ import android.os.IBinder;
 
 /* test_client <hello|goodbye> [name] */
 public class TestClient{
-	private static final String TAG = "TestClient";
+	private static final String TAG = "TestServer";
 
 	public static void main(String args[])
 	{
