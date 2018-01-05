@@ -12,6 +12,8 @@ public class TestServer{
 		Slog.i(TAG, "add hello service");
         	ServiceManager.addService("hello", new HelloService());
 		//ServiceManager.addService(Context.USER_SERVICE, UserManagerService.getInstance());
+		Slog.i(TAG, "add goodbye service");
+        	ServiceManager.addService("goodbye", new GoodbyeService());
 		while(true)
 		{
 			try{
